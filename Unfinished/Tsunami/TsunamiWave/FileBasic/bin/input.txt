@@ -1,0 +1,2 @@
+This is a test message.
+This should be identical in the output file.

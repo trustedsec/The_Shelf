@@ -1,0 +1,3 @@
+Need to follow this guide for installing for python3
+
+https://www.dariawan.com/tutorials/python/python-3-install-pycrypto-windows/

@@ -1,0 +1,5 @@
+{
+  "agent_id": "?int required - The agent ID which must have correspond to a generated agent",
+  "binary_id": "?int required - The binary ID which must have correspond to a generated agent",
+  "password" : "#string auto - The password used by the agent"
+}

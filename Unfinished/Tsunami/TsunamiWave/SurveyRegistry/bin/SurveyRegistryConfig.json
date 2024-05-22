@@ -1,0 +1,3 @@
+{
+  "registry_entries": [ "HKEY_CURRENT_USER:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\*", "HKEY_LOCAL_MACHINE:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\*", "HKEY_CLASSES_ROOT:\\exefile\\shell\\open\\command\\", "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon" ]
+}

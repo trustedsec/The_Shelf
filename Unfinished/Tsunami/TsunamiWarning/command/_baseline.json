@@ -1,0 +1,6 @@
+{
+  "agent_id": "?int required - The agent ID which must have correspond to a generated agent",
+  "binary_id": "?int required - The binary ID which must have correspond to a generated agent",
+  "message_id": "#int auto - The message ID that is auto-calculated based on the specified agent",
+  "command": "?string required - The particular type of command message"
+}

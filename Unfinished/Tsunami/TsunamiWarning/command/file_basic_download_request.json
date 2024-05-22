@@ -1,0 +1,4 @@
+{
+  "file_name": "?string required - The file name to use on the agent for the file from the server",
+  "file_contents": "!file required - The file on the server to send to the agent"
+}

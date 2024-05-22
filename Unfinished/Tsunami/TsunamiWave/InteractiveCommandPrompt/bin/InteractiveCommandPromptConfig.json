@@ -1,0 +1,6 @@
+{
+  "interactive_configuration": {
+    "parent_process": "explorer.exe",
+    "command_prompt": "C:\\Windows\\System32\\cmd.exe"
+  }
+}

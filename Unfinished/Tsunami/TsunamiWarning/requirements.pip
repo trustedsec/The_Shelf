@@ -1,0 +1,11 @@
+ansi==0.1.3
+attrs==19.3.0
+cmd2==0.9.20
+colorama==0.4.1
+cstruct==1.8
+lznt1==0.1.2
+pycrypto==2.6.1
+pyperclip==1.7.0
+pyreadline==2.1
+wcwidth==0.1.7
+wincrypto==0.2

@@ -1,0 +1,4 @@
+{
+  "sleep_seconds": "?int required - The number of seconds to sleep before triggering",
+  "variation_seconds": "?int optional - The number of seconds to vary the sleep time by"
+}

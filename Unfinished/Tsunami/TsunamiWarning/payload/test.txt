@@ -1,0 +1,3 @@
+Test text file from the server.
+This is just a short test file.
+It only contains ASCII characters.

@@ -1,0 +1,5 @@
+{
+  "plugin_name": "?string required - The name of the plugin to be loaded",
+  "plugin_buffer": "!file required - The file containing the plugin buffer (the file will be compressed/encrypted/encoded)",
+  "plugin_config": "?file optional - The file containing any configuration settings to be passed to the plugin's Initialization function"
+}

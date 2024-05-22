@@ -1,0 +1,5 @@
+antlr4-python3-runtime==4.8
+Jinja2
+MarkupSafe
+pycryptodome
+pefile

