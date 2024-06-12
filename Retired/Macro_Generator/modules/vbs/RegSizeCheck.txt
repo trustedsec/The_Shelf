@@ -1,0 +1,13 @@
+Function RegSizeCheck()
+    Set objWMIService = GetObject("winmgmts:\\.\root\CIMV2")
+    Set colRegistry = objWMIService.ExecQuery("SELECT * FROM Win32_Registry")
+    For Each objRegistry in colRegistry
+        objRegistrySize = objRegistry.CurrentSize
+    Next
+    If objRegistrySize > 55 Then
+        RegSizeCheck = True
+    Else
+        RegSizeCheck = False
+    End If
+End Function
+

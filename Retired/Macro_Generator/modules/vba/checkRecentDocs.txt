@@ -1,0 +1,8 @@
+Public Function checkRecentDocs()
+    If Application.RecentFiles.Count < 3 Then
+        checkRecentDocs = False
+    Else
+        checkRecentDocs = True
+    End If
+End Function
+

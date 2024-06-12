@@ -1,0 +1,20 @@
+Function ProcessCheck()
+    Set objWMIService = GetObject("winmgmts:\\.\root\CIMV2")
+    colSandboxProcesses = Array("procexp", "vmsrvc", "tcpview", "wireshark","visual basic", "fiddler", "vmware",_
+        "vbox", "autoit", "vmtools", "vmrawdsk", "vmusbmouse", "vmvss", "vmscsi", "vmxnet", "vmx_svga",_
+        "vmmemctl", "df5serv", "vboxservice", "vmhgfs")
+    Set colProcesses = objWMIService.ExecQuery("Select * from Win32_Process")
+    For Each objProcess in colProcesses
+        For Each objSandboxProcess in colSandboxProcesses
+            If InStr(objProcess.Name, objSandboxProcess) Then
+                objProcessName = objProcessName & vbCrLf & "Process Name: " & objProcess.Name
+            End If
+        Next
+    Next
+    If objProcessName <> "" Then
+        ProcessCheck = False
+    Else
+        ProcessCheck = True
+    End If
+End Function
+

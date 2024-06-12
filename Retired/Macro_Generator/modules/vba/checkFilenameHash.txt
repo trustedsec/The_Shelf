@@ -1,0 +1,22 @@
+Public Function checkFilenameHash()
+    hexchars = "0123456789abcdef"
+
+    count = 0
+
+    For tempcounter = 1 To Len(ThisDocument.Name)
+        tempvariable = Mid(LCase(ThisDocument.Name), tempcounter, 1)
+
+        If InStr(tempvariable, hexchars) > 0 Then
+            count = count + 1
+        End If
+
+    Next
+
+    If count >= (Len(ThisDocument.Name) - 5) Then
+        checkFilenameHash = False
+    Else
+        checkFilenameHash = True
+    End If
+
+End Function
+

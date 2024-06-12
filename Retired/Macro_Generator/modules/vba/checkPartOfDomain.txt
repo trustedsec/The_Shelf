@@ -1,0 +1,19 @@
+Public Function checkPartOfDomain()
+    NotPartOfDomain = False
+    Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
+    Set colItems = objWMIService.ExecQuery("Select * from Win32_ComputerSystem", , 48)
+
+    For Each objItem In colItems
+        If objItem.partOfDomain Then
+            NotPartOfDomain = True
+        End If
+    Next
+
+    If NotPartOfDomain Then
+        checkPartOfDomain = True
+    Else
+        checkPartOfDomain = False
+    End If
+
+End Function
+

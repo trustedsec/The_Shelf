@@ -1,0 +1,23 @@
+Function checkUsername()
+    badUsername = False
+    badUsernames = Array("admin", "malfind", "sandbox", "test")
+
+    Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
+    Set colItems = objWMIService.ExecQuery("Select * from Win32_ComputerSystem", , 48)
+
+    For Each objItem In colItems
+        For Each badName In badUsernames
+            If InStr(LCase(objItem.UserName), badName) > 0 Then
+                badUsername = True
+            End If
+        Next
+    Next
+
+    If badUsername Then
+        checkUsername = False
+    Else
+        checkUsername = True
+    End If
+
+End Function
+

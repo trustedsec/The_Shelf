@@ -1,0 +1,6 @@
+If ProcessorCheck() And ProcessCheck() And RegSizeCheck() And RAMCheck() And ProcessDLLCheck() Then
+    NOTBAD
+Else
+    BAD
+End If
+

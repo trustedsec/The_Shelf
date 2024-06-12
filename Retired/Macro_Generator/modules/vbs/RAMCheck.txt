@@ -1,0 +1,13 @@
+Function RAMCheck()
+    Set objWMIService = GetObject("winmgmts:\\.\root\CIMV2")
+    Set colComputerSystem = objWMIService.ExecQuery("SELECT * FROM Win32_ComputerSystem")
+    For Each objComputerSystem In colComputerSystem
+        objRAMSize = objComputerSystem.TotalPhysicalMemory / (1024 * 1024 * 1024)
+    Next
+    If objRAMSize > 1 Then 
+        RAMCheck = True
+    Else 
+        RAMCheck = False
+    End If  
+End Function
+

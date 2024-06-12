@@ -1,0 +1,19 @@
+Public Function checkCores()
+    badCores = 0
+
+    Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
+    Set colItems = objWMIService.ExecQuery("Select * from Win32_Processor", , 48)
+
+    For Each objItem In colItems
+            If objItem.NumberOfCores < 3 Then
+                badCores = True
+            End If
+    Next
+
+    If badCores Then
+        checkCores = False
+    Else
+        checkCores = True
+    End If
+End Function
+

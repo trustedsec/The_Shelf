@@ -1,0 +1,13 @@
+Function ProcessorCheck()
+    Set objWMIService = GetObject("winmgmts:\\.\root\CIMV2")
+    Set colComputerSystem = objWMIService.ExecQuery("SELECT * FROM Win32_ComputerSystem")
+    For Each objComputerSystem In colComputerSystem
+        objProcessorCount = objComputerSystem.NumberofLogicalProcessors
+    Next
+    If objProcessorCount > 1 Then 
+        ProcessorCheck = True
+    Else 
+        ProcessorCheck = False
+    End If
+End Function
+
