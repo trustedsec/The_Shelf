@@ -1,0 +1,9 @@
+
+https://github.com/littlstar/b64.c.git
+    - include/b64.h
+    - src/encode.c
+    - src/decode.c
+
+The code can be reworked to remove these if needed by just using whatever 
+crypto library you are linking too, simply including to keep a self contained
+repo for ease-of-use purposes.
