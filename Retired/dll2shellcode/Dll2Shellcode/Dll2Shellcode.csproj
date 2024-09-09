@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="sRDI\ShellcodeRDI_x64.bin" />
+      <EmbeddedResource Include="sRDI\ShellcodeRDI_x64.bin" />
+      <None Remove="sRDI\ShellcodeRDI_x86.bin" />
+      <EmbeddedResource Include="sRDI\ShellcodeRDI_x86.bin" />
+    </ItemGroup>
+
+</Project>
