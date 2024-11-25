@@ -23,6 +23,10 @@ Capabilities in this folder were developed for one off usage and have not seen u
 
 Capabilities in this folder had development cycles poured into them, but then for one reason or another were discarded. Expect to find ideas here but do not expect things to just compile and work. 
 
+### Scripts/Catch all folder
+
+Capabilities in this folder are simple scripts for various pentesting purposes. The scripts are typically not polished, but should be fully functional. 
+
 ## Why? 
 
 * This allows us to give back by putting out example code like how we consume it from several locations, further advancing the sharing of ideas. 
