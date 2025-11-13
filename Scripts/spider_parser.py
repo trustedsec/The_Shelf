@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.9
+#!/usr/bin/env -S uv run python3
 
 import glob
 import json
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     # banner()
     parser = argparse.ArgumentParser(description='', epilog=f'Available presets: {", ".join(PRESETS.keys())}')
     parser.add_argument('-d','--dir', type=str, default='/root/.nxc/modules/nxc_spider_plus/', help='Directory of nxc spider plus. Default is /root/.nxc/modules/nxc_spider_plus/')
-    parser.add_argument('REGEX', type=str, help='Regex pattern or preset name to search for')
+    parser.add_argument('REGEX', type=str, nargs='?', help='Regex pattern or preset name to search for')
 
     parser.add_argument('-m','--mount',default=False, action=argparse.BooleanOptionalAction, help='Display commands necessary to create mount shares')
     parser.add_argument('-u','--username', help='Username for mount')
@@ -58,6 +58,10 @@ if __name__ == '__main__':
         for name, pattern in sorted(PRESETS.items()):
             print(f"  {name:15} - {pattern}")
         exit(0)
+
+    # Require REGEX if not listing presets
+    if not args.REGEX:
+        parser.error("REGEX argument is required")
 
     # Load exclusions
     exclusions = {'hosts': set(), 'shares': set()}
@@ -109,4 +113,8 @@ if __name__ == '__main__':
             escaped_share = re.sub('\$','\\\$', share) #escape the dollar sign.
             print(f'mkdir -p /mnt/{hostname}/{escaped_share}')
             print(f'mount -t cifs //{hostname}/{escaped_share} /mnt/{hostname}/{escaped_share} -o username=\'{args.username}\',password=\'{args.password}\'')
+
+
+
+
 
